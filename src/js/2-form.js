@@ -8,7 +8,10 @@ form.addEventListener('input', throttle(onInput, 500));
 form.addEventListener('submit', onSubmit);
 
 const VALUE_KEY = 'feedback-form-state';
-const formData = { email: '', message: '' };
+const formData = {
+  email: '',
+  message: '',
+};
 
 onInputValue();
 
