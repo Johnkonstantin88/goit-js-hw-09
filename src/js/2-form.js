@@ -21,8 +21,8 @@ function onInput(evt) {
 }
 
 function onInputValue() {
-  let formValue = JSON.parse(localStorage.getItem(VALUE_KEY ?? ''));
-  if (formValue) {
+  const formValue = JSON.parse(localStorage.getItem(VALUE_KEY));
+  if (formValue !== null) {
     const {
       elements: { email, message },
     } = form;
@@ -49,5 +49,6 @@ function onSubmit(evt) {
 }
 
 function formDataReset() {
-  (formData.email = ''), (formData.message = '');
+  formData.email = '';
+  formData.message = '';
 }
