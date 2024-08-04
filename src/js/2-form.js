@@ -28,6 +28,8 @@ function onInputValue() {
     } = form;
     email.value = formValue.email;
     message.value = formValue.message;
+    formData.email = formValue.email;
+    formData.message = formValue.message;
   }
 }
 
